@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Watch Picker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="widget">
+    <h1>Pick something to watch</h1>
+
+    <div class="presets">
+      <button data-preset="comfort">Comfort</button>
+      <button data-preset="chaos">Chaos</button>
+      <button data-preset="crying">Crying</button>
+      <button data-preset="confused">Confused?</button>
+    </div>
+
+    <div class="filters">
+      <select id="typeFilter">
+        <option value="">All Types</option>
+      </select>
+
+      <select id="genreFilter">
+        <option value="">All Genres</option>
+      </select>
+
+      <select id="moodFilter">
+        <option value="">All Feels</option>
+      </select>
+
+      <label class="checkbox">
+        <input type="checkbox" id="unwatchedOnly" />
+        Unwatched only
+      </label>
+    </div>
+
+    <button id="pickBtn" disabled>Pick for me</button>
+
+    <div id="result" class="result hidden">
+      <h2 id="title"></h2>
+      <p id="meta"></p>
+      <a id="trailer" target="_blank">Watch trailer →</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
